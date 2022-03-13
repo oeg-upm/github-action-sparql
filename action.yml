@@ -1,0 +1,35 @@
+name: 'sparql-validator'
+description: 'validates & run a SPARQL query contained in a file'
+
+inputs:
+  owner:
+    description: 'The owner of the repository'
+    required: true
+  repo:
+    description: 'The name of the repository'
+    required: true
+  pr_number:
+    description: 'The number of the pull request'
+    required: true
+  token:
+    description: 'The token to use to access the GitHub API'
+    required: true 
+  actor:
+    description: 'The user that activated the pull request'
+    required: true 
+  endpoint:
+    description: 'The SPARQL endpoint'
+    required: true 
+  graph_uri:
+    description: 'The uri of the RDF graph that will be used in the SPARQL endpoint'
+    required: false 
+  format:
+    description: 'The query format output'
+    required: false
+  path:
+    description: 'The path to save the output'
+    required: false
+
+runs:
+  using: 'node16'
+  main: 'index.js'
