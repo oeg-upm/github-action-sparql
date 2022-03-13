@@ -11,11 +11,11 @@ async function main() {
         const repo = core.getInput('repo', { required: true });
         const pr_number = core.getInput('pr_number', { required: true });
         const token = core.getInput('token', { required: true });
-		const actor = core.getInput('actor', { required: true });
-		const endpoint = core.getInput('endpoint', { required: true });
+	const actor = core.getInput('actor', { required: true });
+	const endpoint = core.getInput('endpoint', { required: true });
         const graph_uri = core.getInput('graph_uri', { required: false });
-		const format = core.getInput('format', { required: false });
-		const path = core.getInput('path', { required: false });
+	const format = core.getInput('format', { required: false });
+	const path = core.getInput('path', { required: false });
 
 		let output_format;
 		switch (format) {
@@ -53,42 +53,42 @@ async function main() {
             pull_number: pr_number,
         });
 
-		let response = '';
-		let err = false;
+	let response = '';
+	let err = false;
         let files = false;
-		let fnl_path; 
+	let fnl_path; 
 
         for (const file of changedFiles) {
             const fle = file.filename.split('.');
-			const file_extension = fle.pop();
+		const file_extension = fle.pop();
 
             // if the file is a sparql file we start the validation
             if (file_extension == 'sparql'){
                 files = true;
                 const contents_url = file.raw_url;
                 const contents_request = await makeSynchronousRequest(contents_url);
-				const llamada = await makeSynchronousqueryRequest(graph_uri, contents_request, format, endpoint);
-				const array_res = llamada.toString().split(" ");
+		const llamada = await makeSynchronousqueryRequest(graph_uri, contents_request, format, endpoint);
+		const array_res = llamada.toString().split(" ");
 				
-				if (!path)
-					fnl_path = fle.join('/') + '-';
-				else if (path != 'None'){
-					fs.mkdirSync('./' + path + '/', { recursive: true })
-					fnl_path = path + '/' + fle.join('/').split('/').pop() + '-';
-				}
+		if (!path)
+			fnl_path = fle.join('/') + '-';
+		else if (path != 'None'){
+			fs.mkdirSync('./' + path + '/', { recursive: true })
+			fnl_path = path + '/' + fle.join('/').split('/').pop() + '-';
+		}
 
-				if (array_res[2] == 'Error'){
-					response = response + '# The file with name: ' + file.filename + '\n---\n' + '```\n ' + llamada + ' \n```\n\n';
-					err = true;
+		if (array_res[2] == 'Error'){
+			response = response + '# The file with name: ' + file.filename + '\n---\n' + '```\n ' + llamada + ' \n```\n\n';
+			err = true;
+		}
+		else if (path != 'None'){
+			//Creating the file
+			fs.writeFile('./' + fnl_path + actor + output_format, llamada, err => {
+				if (err) {
+					core.setFailed(error.message);
 				}
-				else if (path != 'None'){
-					//Creating the file
-					fs.writeFile('./' + fnl_path + actor + output_format, llamada, err => {
-						if (err) {
-							core.setFailed(error.message);
-						}
-					})
-				}
+			})
+		}
             }
         }
 
