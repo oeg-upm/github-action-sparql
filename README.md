@@ -52,7 +52,7 @@ The repository name, it is taken from `${{ github.event.repository.name }}`.
 ### `pr_number`
 The pull request number, it is taken from `${{ github.event.number }}`. 
 ### `token`
-The account acces token, it is taken from `${{ secrets.GITHUB_TOKEN }}`. 
+The account access token, it is taken from `${{ secrets.GITHUB_TOKEN }}`. 
 ### `actor`
 The account that created the pull request, it is taken from `${{ github.actor }}`. 
 ### `endpoint`
