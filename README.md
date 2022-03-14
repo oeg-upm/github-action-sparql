@@ -17,11 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     name: [name]
     steps:
-
-      - run: npm i follow-redirects
-      
-      - run: npm i fs
-      
       - name: Checkout
         uses: actions/checkout@v2
       
