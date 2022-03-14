@@ -1,4 +1,4 @@
-name: 'sparql-validator'
+name: 'github-action-sparql'
 description: 'validates & run a SPARQL query contained in a file'
 
 inputs:

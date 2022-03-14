@@ -1,5 +1,5 @@
 {
-  "name": "sparql-validator",
+  "name": "github-action-sparql",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rarycops/SPARQL-Validator.git"
+    "url": "https://github.com/oeg-upm/github-action-sparql.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Rarycops/SPARQL-Validator/issues"
+    "url": "https://github.com/oeg-upm/github-action-sparql/issues"
   },
-  "homepage": "https://github.com/Rarycops/SPARQL-Validator#readme",
+  "homepage": "https://github.com/oeg-upm/github-action-sparql#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.0",
