@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: sparql-validator
-        uses: oeg-upm/github-action-sparqlr@v1.0.0
+        uses: oeg-upm/github-action-sparql@v1.0.0
         id: 'sparql-validator'
         with:
           owner: ${{ github.repository_owner }}
