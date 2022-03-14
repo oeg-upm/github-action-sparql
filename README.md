@@ -56,7 +56,7 @@ The account access token, it is taken from `${{ secrets.GITHUB_TOKEN }}`.
 ### `actor`
 The account that created the pull request, it is taken from `${{ github.actor }}`. 
 ### `endpoint`
-The endpoint for the SPARQL querys, without `https://`.
+The endpoint for the SPARQL queries, without `https://`.
 ### `graph_uri`(optional)
 The graph_uri for the SPARQL query. 
 ### `format`(optional)
