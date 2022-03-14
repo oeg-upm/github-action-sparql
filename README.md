@@ -29,7 +29,7 @@ jobs:
           pr_number: ${{ github.event.number }}
           token: ${{ secrets.GITHUB_TOKEN }}
           actor: ${{ github.actor }}
-          endpoint: 'dbpedia.org/sparql'
+          endpoint: '[endpoint]'
           graph_uri: [uri]
           format: [format]
           path: [path]
