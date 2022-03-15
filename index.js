@@ -11,11 +11,11 @@ async function main() {
         const repo = core.getInput('repo', { required: true });
         const pr_number = core.getInput('pr_number', { required: true });
         const token = core.getInput('token', { required: true });
-	const actor = core.getInput('actor', { required: true });
-	const endpoint = core.getInput('endpoint', { required: true });
+		const actor = core.getInput('actor', { required: true });
+		const endpoint = core.getInput('endpoint', { required: true });
         const graph_uri = core.getInput('graph_uri', { required: false });
-	const format = core.getInput('format', { required: false });
-	const path = core.getInput('path', { required: false });
+		const format = core.getInput('format', { required: false });
+		const path = core.getInput('path', { required: false });
 
 		let output_format;
 		switch (format) {
