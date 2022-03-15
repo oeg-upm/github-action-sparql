@@ -20,6 +20,8 @@
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.0",
-    "follow-redirects": "^1.14.9"
+    "follow-redirects": "^1.14.9",
+    "fs": "^0.0.1-security",
+    "url": "^0.11.0"
   }
 }
