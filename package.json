@@ -1,0 +1,25 @@
+{
+  "name": "github-action-sparql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oeg-upm/github-action-sparql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache License",
+  "bugs": {
+    "url": "https://github.com/oeg-upm/github-action-sparql/issues"
+  },
+  "homepage": "https://github.com/oeg-upm/github-action-sparql#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "follow-redirects": "^1.14.9"
+  }
+}
