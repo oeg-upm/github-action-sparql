@@ -1,6 +1,6 @@
 # SPARQL-Validator
 
-`SPARQL-Validator` is a Github Action that checks if one or multiple `.sparql` files with a SPARQL querry inside are well formed. To check taht the action will make a query to [dbpedia](https://dbpedia.org/sparql), if the status of this query is `400`, meaning that the file is not well formed the action will fail. Independently of the result of the execution the action will put a comment in the pull request with the results of the execution.
+`SPARQL-Validator` is a GitHub Action that checks whether the SPARQL queries included in one or multiple `.sparql` files are well formed. The action evaluates each of the queries found in the repository in the SPARQL endpoint specified as a parameter. If the status obtained after evaluating this query is `400`, this means that the file is not well formed and the action will fail. Independently of the result of the execution, the action will put a comment in the pull request with the results of the execution.
 
 ## Usage
 Create a `.github.workflows/[name].yaml` file in the repository.
