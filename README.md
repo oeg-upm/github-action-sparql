@@ -81,3 +81,7 @@ The `default` path is the path where the files with the querys are stored.
 If the path in the parameter is set, it should look like: `[name]/[name]`
 
 The path to store the outputs of the querys will look like, `[path]/[filename]-[actor].[output]`.
+
+---
+
+El trabajo realizado en este repositorio ha sido elaborado por Miguel Jorge Garcia-Muñoz en el contexto de un Trabajo Fin de Grado de la [ETSIINF](https://www.fi.upm.es/) del curso 2021-2022, bajo la dirección de Oscar Corcho.
